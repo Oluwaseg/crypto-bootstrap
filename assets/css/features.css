@@ -1,0 +1,246 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+:root {
+  --body-color: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  --body-font: "Montserrat", sans-serif;
+  --heading-fonts: "Poppins", sans-serif;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-fonts);
+  font-weight: var(--font-semi-bold);
+}
+body {
+  font-family: var(--body-font);
+  background: var(--body-color);
+  font-size: var(--font-semi-bold);
+  color: #fff;
+}
+/* Style the currentDateTime element */
+#currentDateTime {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 20px 0;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* Reset and common styles */
+.overall-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Crypto Price Tracker styles */
+.crypto-container {
+  background: rgba(72, 104, 176, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.crypto-info,
+.crypto-converter {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.crypto-info h2,
+.crypto-converter h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.converter-input {
+  display: flex;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#crypto-price,
+#converted-amount {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+/* Card styles (You can add more styles as needed) */
+.card-img-top {
+  max-width: 70%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+  transition: max-width 0.3s ease;
+}
+
+.card-img-top:hover {
+  max-width: 100%;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Educational Card styles */
+.edu-card {
+  background: rgba(72, 104, 176, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.2s;
+  padding: 25px;
+  color: #fff;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+.edu-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.edu-text {
+  font-size: 16px;
+}
+
+/* News Card styles (You can add more styles as needed) */
+/* Style the news card container */
+.card-news {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  background: rgba(72, 104, 176, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-news:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the card body */
+.card-news .card-body {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Style the card title */
+.card-news .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Style the card text */
+.card-news .card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Style the "Read More" button */
+.card-news .btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+}
+
+.card-news .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Style the image for the third news card */
+.card-news:nth-child(3) img.card-img-top {
+  border-radius: 15px 15px 0 0;
+  max-width: 70%; /* Adjust the width as needed */
+  height: auto;
+  transition: max-width 0.3s ease;
+}
+
+.card-news:nth-child(3):hover img.card-img-top {
+  max-width: 70%; /* Adjust the width as needed */
+}
+
+/* Advanced Converter Section styles */
+.converter-section {
+  padding: 40px 0;
+}
+
+.converter-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}

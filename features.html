@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/features.css" />
+    <!-- Add these links to the <head> section of your HTML -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Add this element where you want to display the date and time -->
+    <div id="currentDateTime"></div>
+    <section class="crypto-learning scroll-section" data-section="learning">
+      <div class="container">
+        <h2 class="text-center mb-4" style="color: #fff">
+          Crypto Learning Center
+        </h2>
+        <div class="row">
+          <!-- Educational content will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+    <section class="crypto-news scroll-section" data-section="news">
+      <div class="container">
+        <h2 class="text-center mb-4" style="color: #fff">
+          Crypto News and Updates
+        </h2>
+        <div class="row" id="newsArticles">
+          <!-- News articles will be displayed here -->
+        </div>
+      </div>
+    </section>
+    <div class="overall-container scroll-section">
+      <div class="crypto-container">
+        <header>
+          <h1>Crypto Price Tracker</h1>
+        </header>
+        <section class="crypto-info">
+          <h2>Price for selected cryptocurrency</h2>
+          <p>Price: <span id="crypto-price">$0.00</span></p>
+        </section>
+
+        <section class="crypto-converter">
+          <h2>Crypto Converter</h2>
+          <div class="converter-input">
+            <input type="number" id="amount" placeholder="Enter Amount" />
+            <select id="crypto-selector">
+              <option value="bitcoin">Bitcoin (BTC)</option>
+              <option value="ethereum">Ethereum (ETH)</option>
+              <option value="litecoin">Litecoin (LTC)</option>
+              <option value="ripple">Ripple (XRP)</option>
+              <option value="bitcoin-cash">Bitcoin Cash (BCH)</option>
+              <option value="cardano">Cardano (ADA)</option>
+              <option value="polkadot">Polkadot (DOT)</option>
+              <option value="binancecoin">Binance Coin (BNB)</option>
+              <option value="stellar">Stellar (XLM)</option>
+              <option value="chainlink">Chainlink (LINK)</option>
+            </select>
+          </div>
+          <p>Converted Amount: <span id="converted-amount">$0.00</span></p>
+        </section>
+      </div>
+    </div>
+    <script>
+      // Function to update the current date and time
+      function updateDateTime() {
+        const dateTimeElement = document.getElementById("currentDateTime");
+        if (dateTimeElement) {
+          const now = new Date();
+          const dateTimeString = now.toLocaleString(); // Customize the format as needed
+          dateTimeElement.textContent = dateTimeString;
+        }
+      }
+
+      // Update the date and time every second (you can adjust the interval)
+      setInterval(updateDateTime, 1000);
+
+      // Call the function to initially display the date and time
+      updateDateTime();
+    </script>
+    <script src="./assets/js/crypto-news.js"></script>
+    <script src="./assets/js/coverter&history.js"></script>
+    <script src="./assets/js/crypto-edu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
